@@ -1,0 +1,102 @@
+.gallery-title{
+    color: white;
+    font-size: 2.4em;
+    text-align: center;
+    margin: 200px 0vw 0px 0px;
+  }
+  
+  .container{
+      display: flex;
+       justify-content: center;
+       flex-wrap: wrap;
+       align-items: center;
+       height: 100vh;
+       background-color: transparent;
+       
+    }
+   .main{
+       box-sizing: border-box;
+       display: grid;
+       width: auto;
+       grid-template-columns: 250px 250px 250px 250px;
+       grid-template-rows: 250px 250px;
+       
+       padding-top: 5%;
+       padding-bottom: 5%;
+       padding-left: 5%;
+       padding-right: 5%;
+       row-gap: 40px;
+       column-gap: 40px;
+       /* background-color: #000; */
+       border-radius: 15px;
+   }
+   
+   
+   
+   .flip-card {
+       background-color: transparent;
+       overflow: hidden;
+       width: 250px;
+       height: 250px;
+       perspective: 1000px;
+     }
+     .flip-card-front img, .flip-card-back img{
+       height: 250px;
+       width: 250px;
+     }
+     
+     .flip-card-inner {
+  
+       position: relative;
+       width: 100%;
+       height: 100%;
+       text-align: center;
+       /* transition: transform 0.6s; */
+       transition: all 1s ease;
+       transform-style: preserve-3d;
+       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+     }
+     
+     .flip-card:hover .flip-card-inner {
+       transform: rotateY(180deg);
+     }
+     
+     .flip-card-front, .flip-card-back {
+       position: absolute;
+       width: 100%;
+       height: 100%;
+       -webkit-backface-visibility: hidden;
+       backface-visibility: hidden;
+     }
+     
+     .flip-card-front {
+       background-color: #bbb;
+       color: black;
+     }
+     .flip-card-front img{
+      height: 250px;
+      width: 250px;
+     }
+     
+     .flip-card-back {
+       background-color: #2980b9;
+       color: white;
+       transform: rotateY(180deg);
+     }
+   
+     /* media query */
+     @media only screen and (max-width: 800px) {
+        .gallery-title{
+            margin: 40vh 0vw 0vh 0vw;
+        }
+
+       .container{
+         height:auto ;
+       }
+    .main{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+    }
+  
+    }
