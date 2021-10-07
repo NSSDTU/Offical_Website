@@ -1,4 +1,10 @@
 /* No CSS *//*# sourceMappingURL=burger.css.map */
+
+nav{
+    display: flex;
+    justify-content: space-around;
+}
+
 .topnav {
    
     /* background-color: #eee; */
