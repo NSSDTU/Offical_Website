@@ -31,12 +31,12 @@
    .flip-card {
        background-color: transparent;
        overflow: hidden;
-       width: 11.9vw;
+       width: 40.9vw;
        height: 23.8vh;
      }
      .flip-card-front img, .flip-card-back img{
        height: 23.8vh;
-       width: 11.9vw;
+       width: 40.9vw;
      }
      
      .flip-card-inner {
@@ -110,3 +110,14 @@
     }
   
     }
+
+    @media(max-width:570px) and (min-width:320px)
+      {
+          .main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+          }
+
+      }
