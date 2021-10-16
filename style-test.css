@@ -146,6 +146,7 @@ header img{
 .about-content p{
     font-size: 1.5em;
     margin: 0vw 2vw 5vh 2vw;
+    text-align: justify;
 }
 .about-span{
     display: flex;
@@ -185,6 +186,7 @@ header img{
     background-color: #FFFFFF;
     width: 40.5vw;
     grid-column: 1 / span 2;
+    
 }
 .event-1 img{
     margin: 3vh 0 3vh 0;
@@ -195,6 +197,8 @@ header img{
     color: #1454A7;
     font-size: 20px;
     font-weight: bold;
+    text-align: justify;
+
 }
  .event-2{
     background-color: #E9E7E9;
@@ -205,6 +209,8 @@ header img{
 .event-2 p{
     margin: 3vh 2vh;
     font-size: 20px;
+    text-align: justify;
+
     font-weight: bold;
 }
 .event-3{
@@ -222,6 +228,8 @@ header img{
     font-weight: bold;
     font-size: 20px;
     margin: 3vh;
+    text-align: justify;
+
 }
 .event-4{
     background-color: #FFF9F9;
@@ -234,6 +242,8 @@ header img{
     font-weight: bold;
     font-size: 20px;
     margin: 2vh;
+    text-align: justify;
+
 }
 .event-5{
     background-color: #1B4C50;
@@ -249,6 +259,8 @@ header img{
     font-weight: bold;
     font-size: 20px;
     color: #D9AD41;
+    text-align: justify;
+
 }
 /*****events section (end)******/
 
