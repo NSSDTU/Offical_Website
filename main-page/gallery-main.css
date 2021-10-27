@@ -1,0 +1,164 @@
+.gallery-title{
+    color: white;
+    font-size: 2.4em;
+    text-align: center;
+    margin: 200px 0vw 0px 0px;
+  }
+  .gallery{
+    overflow-x: hidden;
+  }
+  
+  .container{
+      display: flex;
+       justify-content: center;
+       flex-wrap: wrap;
+       align-items: center;
+       height: 100vh;
+       background-color: transparent;
+       
+    }
+   .main{
+       box-sizing: border-box;
+       display: grid;
+       width: auto;
+       grid-template-columns: 11.9vw 11.9vw 11.9vw 11.9vw;
+       padding: 5%;
+       grid-gap: 3.8vw 7.6vh;
+   }
+   
+   
+   
+   .flip-card {
+       background-color: transparent;
+       overflow: hidden;
+       width: 11.9vw;
+       height: 23.8vh;
+     }
+     .flip-card-front img, .flip-card-back img{
+       height: 23.8vh;
+       width: 11.9vw;
+     }
+     
+     .flip-card-inner {
+  
+       position: relative;
+       width: 100%;
+       height: 100%;
+       text-align: center;
+       transition: all 1s ease;
+       transform-style: preserve-3d;
+       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+     }
+     
+     .flip-card:hover .flip-card-inner {
+       transform: rotateY(180deg);
+     }
+     
+     .flip-card-front, .flip-card-back {
+       position: absolute;
+       width: 100%;
+       height: 100%;
+       -webkit-backface-visibility: hidden;
+       backface-visibility: hidden;
+     }
+     
+     .flip-card-front {
+       background-color: #bbb;
+       color: black;
+     }
+     .flip-card-front img{
+      height: 250px;
+      width: 250px;
+     }
+     
+     .flip-card-back {
+       background-color: #2980b9;
+       color: white;
+       transform: rotateY(180deg);
+     }
+   
+
+     /* media query */
+     @media only screen and (max-width: 800px) {
+      .main{
+        box-sizing: border-box;
+        display: grid;
+        width: auto;
+        grid-template-columns: 11.9vw 11.9vw;
+        padding: 5%;
+        /* grid-gap: 3.8vw 7.6vh; */
+    }
+        .gallery-title{
+            margin: 40vh 0vw 0vh 0vw;
+        }
+
+       .container{
+         height:auto ;
+       }
+       .flip-card-inner{
+         width: 20vw;
+       }
+    .main{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+    }
+    @media only screen and (max-width: 500px){
+      .gallery-title{
+        margin: 20vh auto 10vh;
+      }
+    }
+  
+    }
+    @media (max-width:670px) and (min-width:350px)
+    {
+      .main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+      }
+      .flip-card {
+        background-color: transparent;
+        overflow: hidden;
+        width: 50vw;
+        height: 23.8vh;
+      }
+      .flip-card-front img, .flip-card-back img{
+        height: 23.8vh;
+        width: 50vw;
+      }
+      
+      .flip-card-inner {
+   
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: all 1s ease;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      }
+      
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+      
+      .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+      
+      .flip-card-front {
+        background-color: #bbb;
+        color: black;
+      }
+      .flip-card-front img{
+       height: 250px;
+       width: 250px;
+      }
+    }
