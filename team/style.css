@@ -71,7 +71,7 @@ header{
     background-color: rgb(0, 38, 98);
     font-family: 'Nunito', sans-serif;
     position: relative;   
-    background: url('./img/NSS-team2.png') no-repeat center center/cover;
+    background: url('./img/NSS-team2.PNG') no-repeat center center/cover;
     height: 100vh;
     
     filter: blur(0.5px);
