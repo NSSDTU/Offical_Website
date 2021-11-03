@@ -252,8 +252,8 @@ header{
 
 .containers .card .content .imgBx{
     position: relative;
-    width: 100px;
-    height: 150px;
+    width: 10px;
+    height: 100px;
     overflow: hidden;
     border:  10px solid rgba(0, 0, 0, 0.5);
 }
