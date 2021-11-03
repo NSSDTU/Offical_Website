@@ -253,8 +253,7 @@ header{
 .containers .card .content .imgBx{
     position: relative;
     width: 100px;
-    height: 100px;
-    border-radius: 50%;
+    height: 150px;
     overflow: hidden;
     border:  10px solid rgba(0, 0, 0, 0.5);
 }
