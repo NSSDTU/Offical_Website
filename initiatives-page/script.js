@@ -1,77 +1,66 @@
-var $slider = $('.slideshow .slider'),
-  maxItems = $('.item', $slider).length,
-  dragging = false,
-  tracking,
-  rightTracking;
+function parallax(element,distance,speed){
+    const item = document.querySelector(element);
 
-$sliderRight = $('.slideshow').clone().addClass('slideshow-right').appendTo($('.split-slideshow'));
+    item.style.transform = `translateY(${distance*speed}px)`;}
+    
+    window.addEventListener('scroll',function(){
+        parallax('header',window.scrollY,1);
+    })
 
-rightItems = $('.item', $sliderRight).toArray();
-reverseItems = rightItems.reverse();
-$('.slider', $sliderRight).html('');
-for (i = 0; i < maxItems; i++) {
-  $(reverseItems[i]).appendTo($('.slider', $sliderRight));
-}
+      
+  //clicking card
 
-$slider.addClass('slideshow-left');
-$('.slideshow-left').slick({
-  vertical: true,
-  verticalSwiping: true,
-  arrows: false,
-  infinite: true,
-  dots: true,
-  speed: 1000,
-  cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)'
-}).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+  const navButton = document.querySelector('.nav-button');
+  const navOpen = document.querySelector('.nav-open');
 
-  if (currentSlide > nextSlide && nextSlide == 0 && currentSlide == maxItems - 1) {
-    $('.slideshow-right .slider').slick('slickGoTo', -1);
-    $('.slideshow-text').slick('slickGoTo', maxItems);
-  } else if (currentSlide < nextSlide && currentSlide == 0 && nextSlide == maxItems - 1) {
-    $('.slideshow-right .slider').slick('slickGoTo', maxItems);
-    $('.slideshow-text').slick('slickGoTo', -1);
-  } else {
-    $('.slideshow-right .slider').slick('slickGoTo', maxItems - 1 - nextSlide);
-    $('.slideshow-text').slick('slickGoTo', nextSlide);
+
+  const  t1 = new TimelineLite({paused:true});
+
+  t1.to('.cover',1,{
+      width :'60%',
+      ease:Power2.easeOut
+  })
+  .to('nav',1,{
+      height:'100%',
+      ease:Power2.easeOut
+  },'-=0.5')
+  .fromTo('.nav-open',0.5,{
+      opacity:0,
+      x:50,
+      ease:Power2.easeOut
+  },{
+      opacity: 1,
+      x:0,
+      onComplete:function(){
+          navOpen.style.pointerEvents = 'auto';
+          console.log('done');
+      }
+  })
+
+  navButton.addEventListener('click',()=>{
+      if(t1.isActive())
+      {      
+             e.preventDefault();
+             e.stopImmediatePropagation();
+             return false;
+      }
+    toggleTween(t1);
+  });
+
+  function toggleTween(tween)
+  {
+      tween.reversed() ? tween.play() : tween.reverse();
   }
-}).on("mousewheel", function(event) {
-  event.preventDefault();
-  if (event.deltaX > 0 || event.deltaY < 0) {
-    $(this).slick('slickNext');
-  } else if (event.deltaX < 0 || event.deltaY > 0) {
-    $(this).slick('slickPrev');
-  };
-}).on('mousedown touchstart', function(){
-  dragging = true;
-  tracking = $('.slick-track', $slider).css('transform');
-  tracking = parseInt(tracking.split(',')[5]);
-  rightTracking = $('.slideshow-right .slick-track').css('transform');
-  rightTracking = parseInt(rightTracking.split(',')[5]);
-}).on('mousemove touchmove', function(){
-  if (dragging) {
-    newTracking = $('.slideshow-left .slick-track').css('transform');
-    newTracking = parseInt(newTracking.split(',')[5]);
-    diffTracking = newTracking - tracking;
-    $('.slideshow-right .slick-track').css({'transform': 'matrix(1, 0, 0, 1, 0, ' + (rightTracking - diffTracking) + ')'});
-  }
-}).on('mouseleave touchend mouseup', function(){
-  dragging = false;
-});
-
-$('.slideshow-right .slider').slick({
-  swipe: false,
-  vertical: true,
-  arrows: false,
-  infinite: true,
-  speed: 950,
-  cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
-  initialSlide: maxItems - 1
-});
-$('.slideshow-text').slick({
-  swipe: false,
-  vertical: true,
-  arrows: false,
-  infinite: true,
-  speed: 900,
-  cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)'
-});
+  window.addEventListener('scroll',()=>{
+    let value = window.scrollY;
+    
+    if(value>=4){
+        document.getElementById("navbar").style.backgroundColor="rgb(44, 44, 44)"
+    }else{
+        document.getElementById("navbar").style.backgroundColor="transparent"
+    
+    }
+    
+    
+    
+    })
