@@ -4,71 +4,100 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Initiative</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css'>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css'>
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto+Condensed:100'>
-    <link rel="icon" type="image/png" href="../main-page/main-img/NSS-logo.png">
-    <link rel="stylesheet" href="./style-rural.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100vh;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 50vw;
+        height: 100%;
+        object-fit: cover;
+      }
+      .text{
+        /* min-width: 50vw; */
+        margin: 0vh 5vw;
+      }
+      .text h2{
+        margin-top: 5vh;
+      }
+      .text h2, .text h3{
+        margin-bottom: 5vh;
+      }
+      .text p{
+        text-align: justify;
+      }
+      @media only screen and (max-width: 680px){
+        .swiper-slide{
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    </style>
 </head>
 <body>
   
-
-  <nav id="navbar" style="height:auto;position: fixed;background-color: transparent;display: flex;justify-content: space-around;z-index: 300;" class="navbar navbar-expand-sm navbar-dark ">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/"><img src="../main-page/main-img/NSS-logo.png" alt=""></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../about-page/index.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://nifty-kilby-048bf6.netlify.app/">Kartavya</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../events-page/index.html">Events</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../initiatives-page//index.html">Initiatives</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../team/index.html">Team</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../contact-page/index.html">Contact</a>
-          </li>
-         
-        </ul>
-       
-      </div>
-    </div>
-  </nav>
+ <header>
+     <div class="intro-text">
  
+         
+     </div>
 
- <header class="intro-text">
-    
  </header>  
 
- 
+ <div class="below">
 
-
- <section id="rakt">
-    <h1>RAKT</h1>
-  <nav>
+  <section id="rakt">
+    
+  <nav id="rakt_nav">
     <div class="nav-closed">
-       <h3>RAKT NSS DTU</h3>
+       <h3 id="rakt_tittle">RAKT NSS DTU</h3>
        <ul class="nav-links">
-         <li class = "nav-button" id="1" >Read More</li>
+         <li class = "nav-button" id="1"  >Read More</li>
        </ul>
     </div>
     <div class="nav-open">
@@ -76,73 +105,63 @@
        <p>
          Lorem, ipsum dolor sit amet consectetur adipisicing elit. A libero error mollitia.
        </p>
+        <h6 class="Read_less" >Read Less</h6>
       </div>
     </div>
   </nav>
   
-  <h1 class="cover-date">03/03/2021</h1>
-     
+   
+  <video style="z-index: 400;" autoplay loop  id="rakt_video" src="./How_do_we_work.mp4" type="video/mp4">
+  </video>
+  <img src="./vecteezy_activism-illustration_wk0121_generated.jpg" alt="" class="cover" id="rakt_cover">
+
  </section>
 
- <section id="second">
-    <h1>VOA</h1>
 
+ <div id="VOA">
+  <h1 class="voa_tittle">Voice Of Animal</h1>
+   <div class="voa_main_content">
+     <div class="voa_left">
+      <div class="voa_para">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia dolorem eaque culpa, nisi facilis doloremque! Aliquam culpa itaque consequatur similique dolorum, id accusantium quos optio quia in consectetur ipsam sit quam neque? Laudantium sapiente ea expedita nemo minus odio ullam itaque incidunt aliquam est praesentium qui dolores sunt dicta maiores dolore id architecto doloremque modi repellat cumque cum, facere, quibusdam molestiae. Facilis, voluptatem vero quas adipisci perferendis quibusdam provident iste iusto odio ea tempore, iure doloribus maxime accusamus? Recusandae delectus cupiditate ut, velit cumque animi illum expedita ratione! Ducimus molestiae, pariatur voluptatem placeat velit nam inventore aperiam nihil veniam vitae temporibus alias maxime officia similique! Id optio distinctio perspiciatis, sint recusandae quaerat aut deleniti velit numquam veniam corporis sunt, voluptatem nam sequi aspernatur iste? Porro eligendi odio magnam dolor aperiam et in minima quidem vero quis itaque, tempora sunt autem illo obcaecati velit veritatis ea! Sed esse in accusamus deleniti?</p>
+      </div>
 
+      <img src="" alt="random image">
+     </div>
+     <div class="voa_right">
+       <img src="./VOA Logo (1).png" alt="voa logo" class="logo_voa">
+       <div class="smartphone_video">
+         <img src="./smartphone1.png" alt="" class="smartphone_voa">
+         <video  autoplay loop  id="voa_video_smartphone" src="./voavideo.mp4" type="video/mp4">
+         </video>
+       </div>
+     </div>
+   </div>
    
-    <nav>
-      <div class="nav-closed">
-         <h3>Portfolio</h3>
-         <ul class="nav-links">
-           <li class = "nav-button" id="2">Shop</li>
-         </ul>
+ </div>
+
+
+<section id="First">
+  <nav>
+    <div class="nav-closed">
+       <h3>Education</h3>
+       <ul class="nav-links">
+         <li class = "nav-button" id="2" onclick={active(2)}>Read More</li>
+       </ul>
+    </div>
+    <div class="nav-open">
+      <div class="clothing">
+       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium molestiae soluta tempora, similique suscipit voluptatem, eligendi labore incidunt illo quos eos, ullam rem maiores ipsa in doloremque odio culpa. Assumenda obcaecati ab facere sunt!</p>
+       <h6 class="Read_less" >Read Less</h6>
       </div>
-      <div class="nav-open">
-        <div class="clothing">
-         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium molestiae soluta tempora, similique suscipit voluptatem, eligendi labore incidunt illo quos eos, ullam rem maiores ipsa in doloremque odio culpa. Assumenda obcaecati ab facere sunt!</p>
-        </div>
-        <div class="nav-images">
-          
-          <img src="../img/DTU-shot.jpg" alt="one image">
-         
-         
+    
+    </div>
+  </nav>
   
-        </div>
-      </div>
-    </nav>
-    <img src="../img/about.jpg" alt="" class="cover">
-    <h1 class="cover-date">03/03/2021</h1>
 </section>
+</div>
 
-
-  <section id="first">
-    <h1>Education</h1>
-
-   
-    <nav>
-      <div class="nav-closed">
-         <h3>Portfolio</h3>
-         <ul class="nav-links">
-           <li class = "nav-button" id="3">Shop</li>
-         </ul>
-      </div>
-      <div class="nav-open">
-        <div class="clothing">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus et repellat, a cupiditate vitae animi fugiat dolor quidem. Et minima a, accusamus voluptatum, nam itaque omnis quas veritatis facilis nostrum nesciunt ad tempora. Eos?</p>
-        </div>
-        <div class="nav-images">
-          
-          <img src="../img/DTU-shot.jpg" alt="one image">
-         
-         
-  
-        </div>
-      </div>
-    </nav>
-    <img src="../img/about.jpg" alt="" class="cover">
-    <h1 class="cover-date">03/03/2021</h1>
-</section> 
-
-<div class="slider">
+<!-- <div class="slider">
   <div class="slider-wrapper flex">
     <div class="slide flex">
       <div class="slide-image slider-link prev"><img src="./initiative-img/2016.png"><div class="overlay"></div></div>
@@ -198,46 +217,133 @@
   <a href="#" title="Previous" class="arrow slider-link prev"></a>
   <a href="#" title="Next" class="arrow slider-link next"></a>
   </div>
-  </div>
+ </div> -->
 
-<footer>
-        <div class="footer-right">
-          <button>Contact Us</button>
+ <div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <img src="./initiative-img/2019.jpg" alt="">
+      <div class="text"><h2>TRYAMBAKAM, Alwar</h2>
+        <h3>2019</h3>
+        <p>With a mission to promote the preservation of natural
+          resources and indigenous practices, NSS DTU organized
+          its annual Rural Camp from 20th to 25th December 2019,
+          at Gopalpura, Alwar. Among other activities like learning
+          about organic farming practices, setting up library
+          facilities at the community school, offering 'Shramdaan,’
+          and many more, the volunteers interacted and learned
+          from the 'Waterman of India', Sh. Rajendra Singh
+          regarding various water preservation and river revival
+          techniques.</p>
       </div>
-        <div class="footer-mid">
-            <div class="socials">
-                <a href="https://www.linkedin.com/company/national-service-scheme-dtu/" class="social"><i class="fab fa-linkedin fa-2x"></i></a>
-                <a href="https://www.instagram.com/nssdtu/" class="social"><i class="fab fa-instagram  fa-2x"></i></a>
-                <a href="https://www.facebook.com/NSSDelTech/" class="social"><i class="fab fa-facebook  fa-2x"></i></a>
-                <a href="https://twitter.com/NSSDTU" class="social"><i class="fab fa-twitter  fa-2x"></i></a>
-                <a href="https://www.youtube.com/channel/UCig231fNP39jVqghG4yJZKg" class="social"><i class="fab fa-youtube  fa-2x"></i></a>
-            </div>
-            <div class="copyright">
-                <h4>All rights reserved by <span>NSS DTU</span>  <br>  copyright &copy; 2021</h4>
-            </div>
-           
-        </div>
+    </div>
+    <div class="swiper-slide">
+      <img src="./initiative-img/2018 (2).JPG" alt="">
+       <div class="text"><h2>villages of Bheekampura and Gopalpura, Rajasthan</h2>
+         <h3>2018</h3>
+         <p>Our Rural Camp'18 was in the villages of Bheekampura and Gopalpura,Thanagazi tehsil, Alwar
+          district in the state of Rajasthan from December 15,2018 to December 20, 2018. This camp was
+          attended by 36 volunteers of NSS- DTU who were passionate about understanding the problems
+          faced by people at the grassroot level of our country, the places where the benefits of modern
+          education, technology and the rapid economic growth have not yet percolated. Yet, they were
+          also aware of the immense value these villages had in teaching us about the sustainable manner
+          of living in tune with the ways of nature- something the developed world seems to be in dire
+          need of.
+          Though the goal of this camp was to broaden our understanding of the conditions prevailing in
+          these villages by living with them for some time, we were also successful in making some
+          contributions to the village by means of solar panel installation and informative artwork in the
+          community hall. Bheekampura is the village which serves as the headquarters for Tarun Bharat
+          Sangh, an environmental NGO currently working in the field of water harvesting using
+          innovative indigenous methods. They have been successful in mitigating the problem of water
+          scarcity to a large extent in the drought prone state of Rajasthan. Gopalpura is an adjacent village
+          housing a community of farmers and their families.
+          </p>
+       </div>
+     </div>
+     <div class="swiper-slide">
+      <img src="./initiative-img/2017.jpg" alt="">
+      <div class="text"><h2>Village Harchandpur Kalan</h2>
+        <h3>2017</h3>
+        <p>Our Rural Camp'17 was in the village Harchandpur Kalan, Sakit Block (Etah district, UP) from
+          December 27th, 2017 to January 1st, 2018. This camp was attended by 34 volunteers of
+          NSS-DTU with a mission to bring about ground-level changes in the village and to understand
+          the problems of rural India from the roots.
+          Every NSS volunteer had summoned in their minds to stand up to their motto “Not Me But
+          You”, by striving for selfless service to the village with full dedication and determination. We
+          focussed on certain issues of prime importance such as Open defecation, Hygiene, Education,
+          Career, govt. scheme implementation, etc. by organising various activities in the village.
+          Harchandpur Kalan is a small village in the Etah district of western Uttar Pradesh with a
+          population of approximately 1500 people. The most common occupations are farming, labour
+          and cattle rearing.The camp was organised in collaboration with an NGO, Jaago India which is a
+          people’s movement for building leaders among the society. Jaago India has been working for the
+          development of Harchandpur since the past few months.</p>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <img src="./initiative-img/2016.png" alt="">
+      <div class="text"><h2>village Gadhaiya, UP</h2>
+        <h3>2016</h3>
+        <p>Gadhaiya is a small village in the Rampur district of western Uttar Pradesh with a population of
+          approximately 2000 people. The most common occupations are farming and labour. The camp
+          was organised in collaboration with an NGO, Jaago India which is a people’s movement for
+          building leaders among the society. Jaago India has been consistently working for the
+          development of Gadhaiya.
+          The volunteers of National Service Scheme, Delhi Technological University (NSSDTU) made
+          serious efforts to serve the purpose of their motto “Not me, but you” at the Special Rural Camp.
+          Forty seven volunteers reached the village on the night of October 7 and were welcomed warmly
+          by the villagers. The activities started early on the morning of the 8th of October. The camp
+          activities aimed to increase our students’ knowledge and skills in social work practice by
+          interacting with the rural community, learning about rural lifestyle, team spirit, sharing, planning
+          and organizing programs etc as it provided ample opportunities for the students to fine tune their
+          interpersonal relationship skills through the process of group dynamics. The students spread
+          awareness, information, and organized various programs for the community during the rural
+          camp.
+          </p>
+      </div>
+    </div>
+    
+    
+    
+  </div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-pagination"></div>
+</div>
 
-        <div class="footer-right">
-            <button class="btn-right">Read our Newsletter</button>
-        </div>
-    </footer>
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    effect: "fade",
+    loop: true,
+    autoplay: true,
+    pagination: {
+      
+      el: ".swiper-pagination",
+      type: "progressbar",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
 
 
-
-
-<!--for other initiatives-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script> 
-<script src="script.js"></script> 
-
-
-
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 <script src="./script-rural.js"></script>
+<script src="script.js">
+</script> 
+
 
 </body>
 </html>
