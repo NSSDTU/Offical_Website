@@ -401,10 +401,17 @@ footer{
         height: 7vh;
     }
 }
-@media only screen and (min-width: 70px) and (max-width:770px){
+@media only screen and (min-width: 70px) and (max-width:867px){
     nav img{
         margin: 0vh 0vw 0vh 4vw ;   
         }
+}
+@media only screen and (max-width: 790px){
+    .nav-item{
+        font-size: 0.9em;
+        padding: 0vh 0vw;
+        margin: 0vh 0.2vw; 
+    }
 }
 /*****responsiveness for tablets (end)******/
 
