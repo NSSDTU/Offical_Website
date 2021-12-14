@@ -12,6 +12,9 @@ body{
     font-family: 'Nunito', sans-serif;
   
 }
+ul{
+    list-style:none;
+}
 /*****scroll bar (start)******/
 ::-webkit-scrollbar {
     width: 5px;
