@@ -11,6 +11,11 @@ body{
     font-family: 'Nunito', sans-serif;
   
 }
+
+ul{
+    list-style: none;
+}
+
 /*****scroll bar (start)******/
 ::-webkit-scrollbar {
     width: 5px;
@@ -28,39 +33,117 @@ body{
   }
 /*****scroll bar (end)******/
 
-/*****nav section (start)******/
-#burger{
-    position: absolute;
-    opacity: 0%;
-    cursor: pointer;
-}
-#close{
-    position: absolute;
-    opacity: 0%;
-    cursor: pointer;
-}
-.burger_menu{
-    position: absolute;
-    opacity: 0%;
-}
-nav{ 
-    transition: all 0.3s ease;
-    font-family: 'Nunito', sans-serif;
-    background-color: transparent;
+ /*****nav section (start)******/
+#navbar{
+    height:auto;
+    min-width: 100%;
     position: fixed;
-    width: 100%;
-    z-index: 1;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    z-index: 300;
+    align-items: center;
+    padding: 1rem 0;
 }
-nav img{
-    width: 65px;
-    height: 65px;
-    margin: 0vh 30vw 0vh 14vw ;
+
+.logo {
+    display: flex;
+    align-items: center;
 }
+
+.logo img{
+    width: 50px;
+    margin-right: 10px;
+}
+
+.nav-logo{
+    color: #eeee;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.nav-list{
+    display: flex;
+    align-items: center;
+}
+
 .nav-item{
-    font-size: 1.3em;
-    margin: 0vh 2%;
+    margin: 0 8px;
+    color: #fff;
 }
-/*****nav section (end)******/
+
+.nav-link{
+    padding: 10px;
+    color: #eeee;
+    font-size: 0.9rem;
+    font-weight: 400;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.menu{
+    color: #C8C8C8;
+}
+.menu:hover{
+    color:#BEBEBE;
+}
+.active{
+    color: antiquewhite;
+    font-weight: 700;
+}
+#close-menu, #toggle-menu{
+    display: none;
+}
+
+@media screen and (max-width:820px) {
+    nav{
+        height: 48px;
+        justify-content: space-between;
+        padding: 0 28px;
+    }
+    .logo a{
+        font-size: 0.9rem;
+    }
+    .logo img{
+        width: 30px;
+    }
+    #toggle-menu{
+        display: inline;
+        color: #eeee;
+        font-size: 24px;
+    }
+    #close-menu{
+        position: absolute;
+        right: 24px;
+        display: block;
+        font-size: 24px;
+        border-radius: 50%;
+    }
+    .nav{
+        position: fixed;
+        top:0;
+        right:-100%;
+        background-color: rgb(44,44,44);
+        color: #eeee;
+        width: 60%;
+        height: 100vh;
+        z-index: 300;
+        transition: 0.5s;
+        border-radius: 0 0 0 50%;
+    }
+    .nav-list{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-item{
+        margin: 2% 0;
+    }
+    .show{
+        right: 0%;
+    }
+
+}
+
 
 /*****header section (start)******/
 header{
