@@ -21,42 +21,26 @@
 </head>
 
 <body>
- <nav id="navbar" style="height:auto;position: fixed;background-color: transparent;display: flex;justify-content: space-around;z-index: 300;" class="navbar navbar-expand-sm navbar-dark ">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/"><img src="./img/NSS-logo.png" alt=""></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          
-          <li class="nav-item">
-            <a class="nav-link" href="../main-page/index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../event-page/index.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://nifty-kilby-048bf6.netlify.app/">Kartavya</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../events-page/index.html">Events</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Intiatives</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../team/index.html">Team</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link"  href="../contact-page/index.html">Contact</a>
-          </li>
-         
-        </ul>
-       
-      </div>
-    </div>
-  </nav>
+  <nav id="navbar">
+        <div class="logo">
+          <img src="./img/NSS-logo.png" alt="">
+          <a href="../main-page/index.html" class="nav-logo"><span class="menu">NSS DTU </span> </a>
+        </div>
+        <div class="nav" id="nav-menu">
+          <i class="fas fa-times" id="close-menu"></i>
+          <ul class="nav-list">
+            <li class="nav-item"><a href="../about-page/index.html" class="nav-link"><span class="menu">About</span></a></li>
+            <li class="nav-item"><a href="../team/index.html" class="nav-link"><span class="menu">Team</span></a></li>
+            <li class="nav-item"><a href="../events-page/index.html" class="nav-link"><span class="menu">Events</span></a></li>
+            <li class="nav-item"><a href="../practice website/index.html" class="nav-link"><span class="menu active"> Initiatives</span></a></li>
+            <li class="nav-item"><a href="../recruitment/index.html" class="nav-link"><span class="menu">Recruitment</span></a></li>
+            <li class="nav-item"><a href="https://nifty-kilby-048bf6.netlify.app/" class="nav-link"><span class="menu">Kartavgya</span></a></li>
+            <li class="nav-item"><a href="../contact-page/index.html" class="nav-link"><span class="menu">Contact Us</span></a></li>
+          </ul>
+        </div>
+        <i class="fas fa-ellipsis-v" id="toggle-menu"></i>
+            
+      </nav>
     <header>
         <div class="header-content" id="header">
         </div>
