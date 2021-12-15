@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(536deg, rgba(54, 54, 54, 0.05) 0%, rgba(54, 54, 54, 0.05) 33.333%,rgba(85, 85, 85, 0.05) 33.333%, rgba(85, 85, 85, 0.05) 66.666%,rgba(255, 255, 255, 0.05) 66.666%, rgba(255, 255, 255, 0.05) 99.999%),linear-gradient(583deg, rgba(81, 81, 81, 0.05) 0%, rgba(81, 81, 81, 0.05) 33.333%,rgba(238, 238, 238, 0.05) 33.333%, rgba(238, 238, 238, 0.05) 66.666%,rgba(32, 32, 32, 0.05) 66.666%, rgba(32, 32, 32, 0.05) 99.999%),linear-gradient(370deg, rgba(192, 192, 192, 0.05) 0%, rgba(192, 192, 192, 0.05) 33.333%,rgba(109, 109, 109, 0.05) 33.333%, rgba(109, 109, 109, 0.05) 66.666%,rgba(30, 30, 30, 0.05) 66.666%, rgba(30, 30, 30, 0.05) 99.999%),linear-gradient(419deg, rgba(77, 77, 77, 0.05) 0%, rgba(77, 77, 77, 0.05) 33.333%,rgba(55, 55, 55, 0.05) 33.333%, rgba(55, 55, 55, 0.05) 66.666%,rgba(145, 145, 145, 0.05) 66.666%, rgba(145, 145, 145, 0.05) 99.999%),linear-gradient(320deg, rgb(9, 201, 186),rgb(18, 131, 221));
+  
+}
+/*****scroll bar (start)******/
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #3fb0fb;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #f5f5f5;
+  }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: antiquewhite;
+  }
+/*****scroll bar (end)******/
+
+/*****nav section (start)******/
+#burger{
+    position: absolute;
+    opacity: 0%;
+    cursor: pointer;
+}
+#close{
+    position: absolute;
+    opacity: 0%;
+    cursor: pointer;
+}
+.burger_menu{
+    position: absolute;
+    opacity: 0%;
+}
+nav{
+    
+    transition: all 0.3s ease;
+    font-family: 'Nunito', sans-serif;
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+nav img{
+    width: 65px;
+    height: 65px;
+    margin: 0vh 30vw 0vh 14vw ;
+}
+.nav-item{
+    font-size: 1.3em;
+    margin: 0vh 2%;
+}
+
+/*****header section (start)******/
+header{
+    box-shadow: 0 15px 20px rgba(0,0,0,0.2);
+    overflow: hidden;
+    background-color: rgb(0, 38, 98);
+    font-family: 'Nunito', sans-serif;
+    position: relative;   
+    background: url('./img/nss3.jpg') no-repeat center center/cover;
+    height: 100vh;
+    
+    filter: blur(0.5px);
+    opacity: 70%;
+   
+}
+.header-content{
+    bottom: 69vh;
+    left: 21vw;
+    position: absolute;
+}
+
+/*****header section (end)******/
+
+/*****Rakt section*****/
+.rakt{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('./img/vecteezy_activism-illustration_wk0121_generated.jpg') no-repeat center center/cover;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+}
+
+.healthnav{
+    height: 15%;
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.row{
+    height:85%;
+    display: flex;
+    align-items: center;
+}
+.col{
+    flex-basis: 50%;
+}
+
+.col h1{
+    color: white;
+    font-size: 100px;
+}
+
+.col p{
+    color:whitesmoke;
+    font-size: 50px;
+}
+
+.card{
+    height: 500px;
+    width: 300px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.video{
+    border-radius: 1.5px;
+    opacity: 0.75;
+    height: 470px;
+    width: 250px;
+    margin-top: 3%;
+    padding-bottom: 3%;
+    box-shadow: 0 15px 20px rgba(226, 218, 218, 0.2);
+    transition: 1s ease-in;
+    
+    }
+/********Rakt Section ends********/
+
+/*******Voa section **********/
+.voa{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0,0,0,0.7)), url('./img/WhatsApp\ Image\ 2021-11-09\ at\ 10.18.36.jpeg') no-repeat center center/cover;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+}
+/*****Swiper Section (start) *********/
+.rural{
+    grid-area: rural;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.education{
+    grid-area: education;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.box {
+    position: relative;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 10 0 20 0 ;
+    padding: 20px;
+    min-height: auto;
+    display:grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto ;
+	grid-template-areas: "rural education";
+  }
+
+.box-header{
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+}
+
+.swiper {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    padding: 10px;
+  }
+
+  .swiper-slide {
+    background-size: cover;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+
+/*****Swiper Section (end) *********/ 
+/*****footer section (start)******/
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 33vh;
+    color: white;
+    background-color: rgb(0, 49, 112);
+
+}
+.footer-left h2{
+    margin: 3vh 0vw;
+}
+.footer-left p{
+    margin: 0vh 0.1vw;
+}
+.footer-mid{
+    height: 19vh;
+    text-align: center;
+}
+.socials{
+    text-align: center;
+    margin: 5vh 0vw;
+}
+.socials a{
+    text-decoration: none;
+    color: white;
+    margin: 0vh 20px;
+    transition: all 0.3s ease;
+}
+
+.socials a:hover{
+    color: rgb(0, 160, 209);
+}
+.copyright span{
+    color: rgb(0, 167, 209);
+}
+.footer-right button{
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
+    background-color: transparent;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px solid black;
+    width: 18vw;
+    height: 5vh;
+    transition: all 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.footer-right button:hover{
+    transform: translateY(-4px);
+    color: white;
+    background-color: rgb(0, 55, 158);
+}
+/*****footer section (end)******/
+
+@media only screen and (min-width: 70px) and (max-width: 1400px)  {
+    nav img{
+        margin: 0vh 18vw 0vh 10vw ;
+    }
+
+}
+/*****responsiveness for laptops (end)******/
+
+/*****responsiveness for tablets (start)******/
+@media only screen and (min-width: 70px) and (max-width: 1150px){
+    body{
+        overflow-x: hidden;
+        width: 100vw;
+    }
+    nav img{
+    margin: 0vh 10vw 0vh 4vw ;   
+    }
+    .nav-item{
+        font-size: 1.1em;
+    }
+
+    .footer-right button{
+        height: 7vh;
+    }
+
+}
+@media only screen and (min-width: 70px) and (max-width:770px){
+    nav img{
+        margin: 0vh 0vw 0vh 4vw ;   
+        }
+}
+/*****responsiveness for tablets (end)******/
+
+
+
+/* media query idhar se */
+
+@media only screen and (max-width:570px) {
+    body{
+        overflow-x: hidden;
+        width: 100vw;
+    }
+    .burger_menu{
+        position: fixed;
+        opacity: 100%;
+        background-color: rgb(29, 28, 28);
+    }
+    nav{
+        text-align: center;
+        position: sticky;
+        width: 100vw;
+        height: 75vh;
+    }
+    nav img{
+        margin: 0px;
+    }
+ 
+.title h1{
+    text-align: center;
+    padding-top: 120px;
+}
+footer{
+    position: relative;
+    text-align: center;
+    display: block;
+    height: 53vh;
+}
+.footer-right button{
+    margin: 5vh 0vw 0vh;
+    width: 70vw;
+}
+.copyright{
+    margin-top: 17vh;
+}
+.btn-right{
+    position: absolute;
+    bottom: 18vh;
+    left: 15vw;
+}
+.box{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "rural"
+    "education";
+}
+.education,.rural {
+    width: 100%;
+    padding: 10px;
+}
+
+.col h1{
+    font-size: 50px;
+}
+
+.col p{
+    font-size: 30px;
+}
+}
